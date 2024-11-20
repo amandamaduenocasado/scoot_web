@@ -1,6 +1,10 @@
 
 const burgericonEl = document.getElementById('burger-icon');
 const menuEl = document.getElementById('menu');
+const accordionEl = document.getElementById('accordion');
+const textFaqEl = document.getElementById('text-faq')
+
+/*menu*/
 
 const toggleMenu = () => {
   menuEl.classList.toggle('menu-show');
@@ -14,3 +18,11 @@ const toggleMenu = () => {
 };
 
 burgericonEl.addEventListener('click', toggleMenu);
+
+/*accordion*/
+
+const showText = (event) => {
+  event.target.childen[1].classList.toggle("accordion-show");
+};
+
+accordionEl.addEventListener('click', showText);
